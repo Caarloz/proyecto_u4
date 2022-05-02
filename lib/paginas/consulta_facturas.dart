@@ -159,27 +159,32 @@ class _consulta_facturasState extends State<consulta_facturas> {
 
   String cliente(String codigo) {
     buscarCliente(codigo);
-    return nomCliente;
+    String doc = nomCliente;
+    return doc;
   }
 
   String mesero(String codigo) {
     buscarMesero(codigo);
-    return nomMesero;
+    String doc = nomMesero;
+    return doc;
   }
 
   String mesa(String codigo) {
     buscarMesa(codigo);
-    return nomMesa;
+    String doc = nomMesa;
+    return doc;
   }
 
   String platillo(String codigo) {
     buscarPlatillo(codigo);
-    return nomPlatillo;
+    String doc = nomPlatillo;
+    return doc;
   }
 
   String bebida(String codigo) {
     buscarBebida(codigo);
-    return nomBebida;
+    String doc = nomBebida;
+    return doc;
   }
 
   Widget consulta() {
@@ -206,9 +211,11 @@ class _consulta_facturasState extends State<consulta_facturas> {
         leading: CircleAvatar(
           child: Text('${doc.id}'),
         ),
-        title: Text(cliente(doc.cliente) + ' ' + ' - Mesa: ${mesa(doc.mesa)}'),
-        subtitle: Text(
-            'Platillo: ${platillo(doc.platillo)} - Bebida: ${bebida(doc.bebida)}'),
+        //title: Text(cliente(doc.cliente) + ' ' + ' - Mesa: ${mesa(doc.mesa)}'),
+        //subtitle: Text(
+        //    'Platillo: ${platillo(doc.platillo)} - Bebida: ${bebida(doc.bebida)}'),
+        title: Text('Cliente: ' + doc.cliente + ' ' + ' - Mesa: ${doc.mesa}'),
+        subtitle: Text('Platillo: ${doc.platillo} - Bebida: ${doc.bebida}'),
       );
 
   Stream<List<Doc>> leerDoc() => FirebaseFirestore.instance
