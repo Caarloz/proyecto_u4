@@ -26,7 +26,17 @@ class _PrincipalState extends State<Principal> {
         child: Column(
           children: [
             SizedBox(
-              height: 50,
+              height: 20,
+            ),
+            Text(
+              "Comedor",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
             ),
             SizedBox(
               height: 50,
