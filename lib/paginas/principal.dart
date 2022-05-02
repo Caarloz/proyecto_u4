@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:proyecto_u4/paginas/Meseros.dart';
 import 'package:proyecto_u4/paginas/clientes.dart';
+import 'package:proyecto_u4/paginas/facturas.dart';
 import 'package:proyecto_u4/paginas/platillos.dart';
 import 'package:proyecto_u4/paginas/bebidas.dart';
 import 'package:proyecto_u4/paginas/mesas.dart';
@@ -136,7 +137,7 @@ class _PrincipalState extends State<Principal> {
                         context,
                         PageTransition(
                             alignment: Alignment.bottomCenter,
-                            child: meseros(),
+                            child: facturas(),
                             type: PageTransitionType.scale));
                   },
                   child: Text(
